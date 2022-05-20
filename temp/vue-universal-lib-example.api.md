@@ -4,8 +4,8 @@
 
 ```ts
 
-import { App } from 'vue';
-import { InjectionKey } from 'vue';
+import { App } from 'vue-demi';
+import { InjectionKey } from 'vue-demi';
 
 // @public (undocumented)
 export function createVueCounterPlugin(options?: VueCounterOptions): VueCounterPlugin;

@@ -1,4 +1,4 @@
-import { ref, defineComponent, h } from 'vue';
+import { ref, defineComponent, h } from 'vue-demi';
 import { useCounter } from '@/composables/useCounter';
 
 const props = {
