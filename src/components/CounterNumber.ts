@@ -30,12 +30,17 @@ export const CounterNumber = defineComponent({
   props,
   setup(props, ctx) {
     const { count } = useCounter(props, ctx.emit);
-
+    const clickFun = (): void => {
+      count.value = count.value + 1;
+    }
     return () =>
       h(
         'span',
         {
           class: 'counter-number',
+          onClick() {
+            clickFun();
+          }
         },
         count.value,
       );
