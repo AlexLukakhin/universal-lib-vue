@@ -4,9 +4,8 @@
     <button @click="clickFun">click</button>
   </div>
 </template>
-<script lang="ts">
-import { defineComponent } from 'vue-demi';
-import { useCounter } from '@/composables/useCounter';
+<script>
+import { defineComponent, isVue2 } from 'vue-demi';
 
 export default defineComponent({
   name: 'Awesome',
@@ -33,15 +32,32 @@ export default defineComponent({
       default: 0, // Delay the animation in ms
     },
   },
-  setup(props, ctx) {
-    const { count } = useCounter(props, ctx.emit);
-    const clickFun = (): void => {
-      count.value = count.value + 1;
-    }
+  data() {
     return {
-      count,
-      clickFun,
+      count: 33,
     }
   },
+  methods: {
+    clickFun() {
+      this.count = this.count + 3;
+    }
+  },
+  mounted() {
+    if (isVue2) {
+      console.log('is vue 2')
+    } else {
+      console.log('else-ssssss')
+    }
+  }
+  // setup(props, ctx) {
+  //   const { count } = useCounter(props, ctx.emit);
+  //   const clickFun = (): void => {
+  //     count.value = count.value + 1;
+  //   }
+  //   return {
+  //     count,
+  //     clickFun,
+  //   }
+  // },
 })
 </script>
