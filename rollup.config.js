@@ -7,6 +7,7 @@ import ts from 'rollup-plugin-typescript2';
 import replace from '@rollup/plugin-replace';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+import vue from "rollup-plugin-vue";
 import pascalcase from 'pascalcase';
 
 const pkg = require('./package.json');
@@ -125,6 +126,7 @@ function createConfig(format, output, plugins = []) {
     // used alone.
     external,
     plugins: [
+      vue(),
       tsPlugin,
       createReplacePlugin(
         isProductionBuild,

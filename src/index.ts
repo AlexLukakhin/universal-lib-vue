@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { App, inject, InjectionKey } from 'vue-demi';
-import { CounterNumber } from './components/CounterNumber';
+import CounterNumber from './components/CounterNumber.vue';
 
 export interface VueCounterOptions {
   theme: string;
