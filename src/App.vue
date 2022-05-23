@@ -8,6 +8,7 @@
 </template>
 
 <script lang="ts">
+// @ts-nocheck
 import { defineComponent, ref } from 'vue-demi';
 
 export default defineComponent({

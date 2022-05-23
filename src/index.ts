@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { App, inject, InjectionKey } from 'vue-demi';
 import { CounterNumber } from './components/CounterNumber';
 

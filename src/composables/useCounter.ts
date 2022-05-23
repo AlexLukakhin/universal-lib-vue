@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { ref } from 'vue-demi';
 
 import anime from 'animejs/lib/anime.es.js';

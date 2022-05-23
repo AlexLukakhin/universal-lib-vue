@@ -1,10 +1,11 @@
+// @ts-nocheck
 import { ref, defineComponent, h } from 'vue-demi';
 import { useCounter } from '@/composables/useCounter';
 
 const props = {
   from: {
     type: [Number, String],
-    default: 0,
+    default: 1,
   },
   to: {
     type: [Number, String],
