@@ -27,7 +27,6 @@ export function createVueCounterPlugin(
     options,
     install(app: App) {
       app.component('vue-counter', CounterNumber);
-      app.provide(VueCounterPluginSymbol, this);
     },
   };
 
