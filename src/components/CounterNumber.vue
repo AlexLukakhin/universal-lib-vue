@@ -5,26 +5,25 @@
   </div>
 </template>
 <script>
-import { defineComponent, isVue2 } from 'vue-demi';
+import { defineComponent, isVue2, ref } from 'vue-demi';
 
 export default defineComponent({
-  name: 'Awesomennnn',
-  data() {
-    return {
-      count: 33,
-    }
-  },
-  methods: {
-    clickFun() {
-      this.count = this.count + 3;
-    }
-  },
-  mounted() {
+  name: 'Counter',
+  setup() {
+    // const { count } = useCounter(props, ctx.emit);
     if (isVue2) {
-      console.log('is vue 2!')
+      console.log('is vue 2!!')
     } else {
       console.log('else-ssssss')
     }
-  }
+    const count = ref(11);
+    const clickFun = () => {
+      count.value = count.value + 101;
+    }
+    return {
+      count,
+      clickFun,
+    }
+  },
 })
 </script>
